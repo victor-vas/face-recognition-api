@@ -8,6 +8,6 @@ app.use(cors());
 app.use(express.json());
 app.use(routes);
 
-app.listen(3333, () => {
-  console.log('Back-end started in 3333 port!');
+app.listen(process.env.PORT || 3333, () => {
+  console.log(`Back-end started in ${process.env.PORT} port!`);
 });
